@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    <div class="div0">
+        <div class="div1">
+            <div class="div1_1">免费注册</div>
+            <form action="">
+                <div>
+                    <input type="text" placeholder="必填" class="input1" id="input1" />
+                    <span class="span1">不能为空!!!</span>
+                    <span class="span1_1">√</span>
+                </div>
+
+                <div>
+                    <input type="text" placeholder="必填自定义提示" class="input1" id="input2" />
+                    <span class="span2">这是自定义提示1</span>
+                    <span class="span2_1">√</span>
+                </div>
+
+                <div>
+                    <input type="text" placeholder="请输入用户名" class="input1" id="input3" />
+                    <span class="span3">请输入用户名</span>
+                    <span class="span3_1">√</span>
+                </div>
+
+                <div>
+                    <input type="text" placeholder="请输入昵称" class="input1" id="input4" />
+                    <span class="span4">请输入昵称</span>
+                    <span class="span4_1">√</span>
+                </div>
+
+                <div>
+                    <input type="text" placeholder="请输入十一位手机号" class="input1" id="input5" />
+                    <span class="span5">请输入手机号</span>
+                    <span class="span5_1">√</span>
+                </div>
+
+                <div>
+                    <input type="text" placeholder="请输入验证码" class="input1_6" id="input6" />
+                    <input type="button" id="btn" class="span1_62" value="获取验证码" onclick="settime(this)" />
+                    <span class="span6">请输入验证码</span>
+                    <span class="span6_1">√</span>
+                </div>
+
+                <div>
+                    <input type="text" placeholder="请填写长度为6-20个字符的密码" class="input1" id="input7" />
+                    <span class="span7">请输入密码</span>
+                    <span class="span7_1">√</span>
+                </div>
+
+                <div>
+                    <input type="text" placeholder="请再次输入密码" class="input1" id="input8" />
+                    <span class="span8">请再次输入密码</span>
+                    <span class="span8_1">√</span>
+                </div>
+
+                <div>
+                    <input type="text" placeholder="请输入邮箱,邮箱格式,123@163.com" class="input1" id="input9" />
+                    <span class="span9">请输入邮箱号</span>
+                    <span class="span9_1">√</span>
+                </div>
+
+                <div>
+                    <input type="text" placeholder="请输入身份证" class="input1" id="input10" />
+                    <span class="span10">请输入身份证</span>
+                    <span class="span10_1">√</span>
+                </div>
+            </form>
+            <div class="div1_2">
+                <span class="button">立即注册</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+    $(".password").bind('input propertychange', function () {
+        var nal = $(this).val();
+        if (nal.length < 6 || nal.length > 16) {
+            if (nal != '') {
+                $(this).next().hide();
+                $(this).next().next().show();
+                $(this).next().next().next().hide();
+                return false;
+            }
+        } else {
+            $(this).next().next().next().show();
+            $(this).next().next().hide();
+            return false;
+        }
+        return true;
+    });
+
+    $("#input1").blur(function () {
+        var phone = $("#input1").val();
+        if (phone == '' || phone == null) {
+            $(".span1").show();
+            return false;
+        } else {
+            $(".span1").hide();
+            return true;
+        }
+        return true;
+    });
+
+    $("#input2").blur(function () {
+        var phone = $("#input2").val();
+        if (phone == '' || phone == null) {
+            $(".span2").show();
+            return false;
+        } else {
+            $(".span2").hide();
+            return true;
+        }
+        return true;
+    });
+
+    $("#input3").blur(function () {
+        var phone = $("#input3").val();
+        if (phone == '' || phone == null) {
+            $(".span3").show();
+            return false;
+        } else {
+            $(".span3").hide();
+            return true;
+        }
+        return true;
+    });
+
+    $("#input4").blur(function () {
+        var phone = $("#input4").val();
+        if (phone == '' || phone == null) {
+            $(".span4").show();
+            return false;
+        } else {
+            $(".span4").hide();
+            return true;
+        }
+        return true;
+    });
+
+    $("#input5").blur(function () {
+        var phone = $("#input5").val();
+        if (phone == '' || phone == null) {
+            $(".span5").show();
+            return false;
+        } else {
+            $(".span5").hide();
+            return true;
+        }
+        return true;
+    });
+
+    $("#input6").blur(function () {
+        var phone = $("#input6").val();
+        if (phone == '' || phone == null) {
+            $(".span6").show();
+            return false;
+        } else {
+            $(".span6").hide();
+            return true;
+        }
+        return true;
+    });
+
+    $("#input7").blur(function () {
+        var phone = $("#input7").val();
+        if (phone == '' || phone == null) {
+            $(".span7").show();
+            return false;
+        } else {
+            $(".span7").hide();
+            return true;
+        }
+        return true;
+    });
+
+    $("#input8").blur(function () {
+        var phone = $("#input8").val();
+        if (phone == '' || phone == null) {
+            $(".span8").show();
+            return false;
+        } else {
+            $(".span8").hide();
+            return true;
+        }
+        return true;
+    });
+
+    $("#input9").blur(function () {
+        var phone = $("#input9").val();
+        if (phone == '' || phone == null) {
+            $(".span9").show();
+            return false;
+        } else {
+            $(".span9").hide();
+            return true;
+        }
+        return true;
+    });
+
+    $("#input10").blur(function () {
+        var phone = $("#input10").val();
+        if (phone == '' || phone == null) {
+            $(".span10").show();
+            return false;
+        } else {
+            $(".span10").hide();
+            return true;
+        }
+        return true;
+    });
+
+
+    var countdown = 60;
+    function settime(obj) {
+        if (countdown == 0) {
+            obj.removeAttribute("disabled");
+            obj.value = "获取验证码";
+            countdown = 60;
+            return;
+        } else {
+            obj.setAttribute("disabled", true);
+            obj.value = "重新发送(" + countdown + ")";
+            if (countdown == 0) {
+                countdown = 60;
+                obj.setAttribute("disabled", true);
+                obj.value = "重新发送(" + countdown + ")";
+            }
+            countdown--;
+        }
+        setTimeout(function () {
+            settime(obj)
+        }
+            , 1000)
+    }
+</script>
+
+</html>
