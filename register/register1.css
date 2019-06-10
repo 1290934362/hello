@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #F0EFF4;
+    position: relative;
+}
+.div1 {
+    width: 7.2rem;
+    height: 44px;
+    line-height: 44px;
+    background: #0697da;
+    font-size: 0.32rem;
+    color: #fff;
+    text-align: center;
+}
+.div2_1 {
+    font-size: 0.3rem;
+    color: #666;
+    margin-left: 0.7rem;
+    margin-top: 0.5rem;
+}
+.div2_2 {
+    position: relative;
+    margin-left: 0.7rem;
+    margin-top: -0.3rem;
+}
+.img1_1 {
+    width: 0.45rem;
+    background: #ededed;
+    padding: 0.2rem;
+    position: absolute;
+    top: 0.54rem;
+    left: 0.03rem;
+}
+input {
+    width: 4.7rem;
+    height: 43px;
+    border: 1px solid #bcbfc4;
+    padding-left: 0.9rem;
+    background-color: #f0eff4;
+    outline: none;
+}
+.div3 {
+    margin-top: -0.3rem;
+    position: relative;
+}
+.input1 {
+    width: 1.5rem;
+    height: 43px;
+    border: 1px solid #bcbfc4;
+    padding-left: 0.9rem;
+    background-color: #f0eff4;
+    outline: none;
+}
+.img1_2 {
+    position: absolute;
+    top: 0.6rem;
+    left: 2.6rem;
+}
+.input2 {
+    margin-left: 0.7rem;
+    text-align: center;
+    padding-left: 0;
+    width: 5.5rem;
+    color: #fff;
+    background: #ff8025;
+    border: 0px;
+}
+.div4 {
+    font-size: 0.3rem;
+    color: #666;
+    text-align: right;
+    margin-right: 1rem;
+}
+.span1{
+    text-decoration: underline;
+}
+.span3 {
+    font-size: 0.2rem;
+    color: red;
+    position: absolute;
+    top: 0.8rem;
+    right: 1.2rem;
+    display: none;
+}
+.span4 {
+    font-size: 0.2rem;
+    color: red;
+    position: absolute;
+    top: 0.8rem;
+    right: 1.2rem;
+    display: none;
+}
+.span5 {
+    font-size: 0.2rem;
+    color: red;
+    position: absolute;
+    top: 0.8rem;
+    right: 1.2rem;
+    display: none;
+}
+.span6 {
+    font-size: 0.2rem;
+    color: red;
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    display: none;
+}
+.div5 {
+    position: fixed;
+    top: 10.2rem;
+}
+ul {
+    padding: 0;
+    background-color: #FFF;
+}
+li {
+    list-style-type: none;
+    display: inline-block;
+}
+.nav1 {
+    width: 1.575rem;
+}
+.div5_1 {
+    font-size: 0.3rem;
+    text-align: center;
+    background-color: #FFF;
+    padding-top: 0.2rem;
+    margin-top: -0.3rem;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="register1.css">
+    <script src="js/rem.js"></script>
+</head>
+
+<body>
+    <div class="div0">
+        <div class="div1">
+            <span class="span1_1">注册</span>
+        </div>
+        <div class="div2">
+            <div class="div2_1">账号:</div>
+            <div class="div2_2">
+                <img src="register1.img/person.png" class="img1_1" />
+                <input type="text" placeholder="手机号" class="input3"/>
+                <span class="span3">请输入手机号</span>
+            </div>
+        </div>
+        <div class="div3">
+            <div class="div2_1">密码:</div>
+            <div class="div2_2">
+                <img src="register1.img/suo.png" class="img1_1"/>
+                <input type="text" placeholder="密码" class="input4"/>
+                <span class="span4">请输入密码</span>
+            </div>
+        </div>
+        <div class="div3">
+            <div class="div2_1">确认密码密码:</div>
+            <div class="div2_2">
+                <img src="register1.img/suo.png" class="img1_1" />
+                <input type="text" placeholder="确认密码" class="input5"/>
+                <span class="span5">密码不一致</span>
+            </div>
+        </div>
+        <div class="div3">
+            <div class="div2_1">图片验证码:</div>
+            <div class="div2_2">
+                <img src="register1.img/tu.png" class="img1_1" />
+                <input type="text" placeholder="图片验证码" class="input1" />
+                <span class="span6">验证码不正确</span>
+                <img src="register1.img/yzm.png" class="img1_2" />
+            </div>
+        </div>
+        <div class="div3">
+            <input type="text" value="立即注册" class="input2" />
+        </div>
+        <div class="div4">
+            已有账号？<span class="span1">立即登录</span>
+        </div>
+        <div class="div5">
+            <ul>
+                <li>
+                    <img src="register1.img/nav1.png" class="nav1"/>
+                    <div class="div5_1">首页</div>
+                </li>
+                <li>
+                    <img src="register1.img/nav2.png" class="nav1"/>
+                    <div class="div5_1">首页</div>
+                </li>
+                <li>
+                    <img src="register1.img/nav3.png" class="nav1"/>
+                    <div class="div5_1">首页</div>
+                </li>
+                <li>
+                    <img src="register1.img/nav4.png" class="nav1"/>
+                    <div class="div5_1">首页</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(".input3").blur(function () {
+        var phone = $(".input3").val();
+        if (phone == '' || phone == null) {
+            $(".span3").show();
+            return false;
+        } else {
+            $(".span3").hide();
+            return true;
+        }
+        return true;
+    });
+
+    $(".input4").blur(function () {
+        var phone = $(".input4").val();
+        if (phone == '' || phone == null) {
+            $(".span4").show();
+            return false;
+        } else {
+            $(".span4").hide();
+            return true;
+        }
+        return true;
+    });
+
+    $(".input5").blur(function () {
+        var phone = $(".input5").val();
+        if (phone == '' || phone == null) {
+            $(".span5").show();
+            return false;
+        } else {
+            $(".span5").hide();
+            return true;
+        }
+        return true;
+    });
+
+    $(".input1").blur(function () {
+        var phone = $(".input1").val();
+        if (phone == '' || phone == null) {
+            $(".span6").show();
+            return false;
+        } else {
+            $(".span6").hide();
+            return true;
+        }
+        return true;
+    });
+</script>
+
+</html>

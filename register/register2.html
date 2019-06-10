@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="register2.css">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="div0">
+        <div class="div1">
+            <img src="register2_img/fh.png" class="img1_1" />
+            <span class="span1_1">客服</span>
+        </div>
+        <div class="div2">
+            <div class="span2_1">短信快捷登录</div>
+            <form action="">
+                <div class="div2_1">
+                    <div class="form-group">
+                        <img src="register2_img/souji.png" class="img2_1" />
+                        <input id="telephone" placeholder="手机号码" class="input_1" type="text">
+                        <span class="checkExistRong" id="checkExistPhone"></span>
+                    </div>
+                </div>
+                <div class="div2_2">
+                    <img src="register2_img/yzm.png" class="img2_1" />
+                    <input type="text" placeholder="验证码" class="input_2" />
+                    <span class="span22">请输入验证码</span>
+                    <input type="button" id="btn" class="button_1" value="获取验证码" onclick="settime(this)" />
+                    <div class="div2_21">
+                        <input type="button" readonly="readonly" class="button_2" id="button_2" value="立即登录 / 注册">
+                    </div>
+                    <div class="div2_22">
+                        <img src="register2_img/kuang1.png" class="img2_2" id="img2_2" />
+                        <img src="register2_img/kuang.png" class="img2_2" id="img2_1" />
+                        <span class="span2">同意扣扣网注册协议</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="div3">
+            <div class="div3_1">其它登录方式</div>
+            <ul>
+                <li>
+                    <img src="register2_img/icon-sc1.png" class="img3_1" />
+                    <div class="div3_11">微信</div>
+                </li>
+                <li>
+                    <img src="register2_img/icon-sc2.png" class="img3_1" />
+                    <div class="div3_11">淘宝</div>
+                </li>
+                <li>
+                    <img src="register2_img/icon-sc3.png" class="img3_1" />
+                    <div class="div3_11">腾讯</div>
+                </li>
+                <li>
+                    <img src="register2_img/icon-sc4.png" class="img3_1" />
+                    <div class="div3_11">微博</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="js/rem.js"></script>
+<script>
+    //验证手机号
+    function isPhoneNo(phone) {
+        var pattern = /^1[34578]\d{9}$/;
+        return pattern.test(phone);
+    }
+    function userTel(inputid, spanid) {
+        $(inputid).blur(function () {
+            if ($.trim($(inputid).val()).length == 0) {
+                $(spanid).html("手机号没有输入");
+            } else {
+                if (isPhoneNo($.trim($(inputid).val())) == false) {
+                    $(spanid).html("手机号码不正确");
+                }
+            }
+            $(inputid).focus(function () {
+                $(spanid).html("");
+            });
+        });
+    };
+    userTel('#telephone', "#checkExistPhone");
+</script>
+
+<script>
+    //验证码
+    var countdown = 60;
+    function settime(obj) {
+        if (countdown == 0) {
+            obj.removeAttribute("disabled");
+            obj.value = "获取验证码";
+            countdown = 60;
+            return;
+        } else {
+            obj.setAttribute("disabled", true);
+            obj.value = "重新发送(" + countdown + ")";
+            if (countdown == 55) {
+                $("#btn").css("color", "#000");
+            }
+            countdown--;
+        }
+        setTimeout(function () {
+            settime(obj);
+        }
+            , 1000)
+    }
+</script>
+
+<script>
+    //注册协议
+    $("#img2_1").click(function () {
+        $("#img2_1").hide();
+        $("#img2_2").show();
+        $("#button_2").attr("readonly", false);
+        $("#button_2").css("background", "linear-gradient(to right, #fe5455 , #fc7491)");
+    });
+    $("#img2_2").click(function () {
+        $("#img2_2").hide();
+        $("#img2_1").show();
+        $("#button_2").attr("readonly", "readonly");
+        $("#button_2").css("background", "#f1f1f1", "disabled", "disabled");
+    });
+</script>
+
+<script>
+    //点击登陆验证
+    $(".button_2").click(function () {
+        var ta = $(".input_1").val();
+        var tb = $(".input_2").val();
+        if (ta == null || ta == '') {
+            alert("请输入电话号码");
+            return false;
+        } else if (tb == null || tb == '') {
+            alert("请输入验证码");
+            return false;
+        }
+        return true;
+    });
+</script>
+
+<script>
+    $(".input_2").blur(function () {
+        var phone = $(".input_2").val();
+        if (phone == '' || phone == null) {
+            $(".span22").show();
+            return false;
+        } else {
+            $(".span22").hide();
+            return true;
+        }
+        return true;
+    });
+</script>
+
+<script>
+    $("#button_2").click(function () {
+        if ($("#button_2").prop("readonly") == true) {
+            alert("请勾选注册协议");
+        }
+    });
+</script>
+
+</html>
